@@ -1,11 +1,14 @@
 import React,{useState} from 'react'
 
+//create array of city
+const uf = ['RS','SC','RJ','SP']
+
 const creatControllForm = () => {
     const [form, setform] = useState({
         name:'',
         email:'',
         uf: '',
-        checkbox: false
+        subscribe: false
     })
     
     const getAllValue = () => {
@@ -13,12 +16,14 @@ const creatControllForm = () => {
     }
   
     //this functions works with manage of form that wanna adding more input i can manage here!!
-    const onChange = event =>{
-     const formState = event.target.name   
+    const onChange = event =>{  
+      const formState = event.target.name
+      const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
+      
      setform(curr => {
          return{
              ...curr,
-             [formState]: event.target.value
+             [formState]: value
          }
      })
     }
@@ -30,11 +35,28 @@ const creatControllForm = () => {
                         
             Email:
              <input type='text' name='email' value={form.email} onChange={onChange} /> <br/>
+              
+              <input 
+              type='checkbox'
+              name='subscribe' 
+              value={form.subscribe} 
+              onChange={onChange}  
+              /><br/>
+               {form.subscribe && <p> Thanks for subscribe in the channel!!!</p>}
+                 
+              <select name='uf' value={form.uf} onChange={onChange} >
+                  <option> Selecione of Uf ! </option>
+                  {uf.map(uf => <option key={uf} value={uf} > {uf}
+                  
+                  </option>
+                   )}
+                 
+             </select>
 
              <button onClick={getAllValue}  >Get State</button>
-             <button onChange={() => setform(curr => !curr) }>Hide State</button>
              
-             <pre> {JSON.stringify(form)}</pre>
+             
+             <pre> {JSON.stringify(form, null, 2)}</pre>
 
              {form === 'Pj' && <p>Please adding your Pj</p>}            
      </>)

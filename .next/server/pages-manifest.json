@@ -1,6 +1,9 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/controlled": "pages/controlled.html",
+  "/othercontrolle": "pages/othercontrolle.html",
+  "/unconpra": "pages/unconpra.html",
   "/_document": "pages/_document.js",
-  "/othercontrolle": "pages/othercontrolle.js"
+  "/404": "pages/404.html"
 }
