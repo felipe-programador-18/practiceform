@@ -2,16 +2,18 @@ import React, {useRef, useState} from 'react'
 
 const practiForm = () =>{
  const reffere = useRef(true)
- 
+ const [show, setshow] = useState()
  const getState = () =>{
-     console.log(reffere.current.value)
+     console.log(reffere?.current?.value)
  }
-
+ // when updating page theorical the value that contains inside input
  return(<>
         <h1>training about form uncontrolled!!</h1>
-        <input type='text' />
+       { show && <input type='text' placeholder='uncontrolled' ref={reffere} /> }
         <button onClick={getState}>Get value</button>
+        <button onClick={()=> setshow(curr => !curr)}>hide value</button>
  </>)
+        
 
 
 }
