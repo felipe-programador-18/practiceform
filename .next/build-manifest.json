@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/unconpra": [
+    "/controlled": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/unconpra.js"
+      "static/chunks/pages/controlled.js"
     ]
   },
   "ampFirstPages": []
