@@ -4,8 +4,13 @@ const creatControllForm = () => {
     const [form, setform] = useState({
         name:'',
         email:'',
-        uf: ''
+        uf: '',
+        checkbox: false
     })
+    
+    const getAllValue = () => {
+        console.log(form)
+    }
 
     const onChange = event =>{
      setform(event.target.value)
@@ -19,8 +24,8 @@ const creatControllForm = () => {
             Email:
              <input type='text' name='email' value={form.email} /> <br/>
 
-             <button onChange={onChange}>Get State</button>
-             <button onChange={onChange}>Hide State</button>
+             <button onClick={getAllValue}  >Get State</button>
+             <button onChange={() => setform(curr => !curr) }>Hide State</button>
              
              <pre> {JSON.stringify(form)}</pre>
 

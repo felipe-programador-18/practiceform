@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/controlled.js"
+    ],
+    "/othercontrolle": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/othercontrolle.js"
     ]
   },
   "ampFirstPages": []
