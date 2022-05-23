@@ -8,7 +8,11 @@ const controForm = () => {
    }
    // inside functions i have passed it setvalue to get event of input!!
    const onChange = event => {
-     setvaleu(event.target.value)   
+       setvaleu(event.target.value)
+       if(event.target.value === ''){
+           console.log('fill in the fielt please!!!')
+        }
+        
    } 
 
    return(<>
