@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/controlled": [
+    "/unconpra": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/controlled.js"
+      "static/chunks/pages/unconpra.js"
     ],
     "/usereff": [
       "static/chunks/webpack.js",
