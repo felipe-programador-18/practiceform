@@ -7,14 +7,17 @@ const createAnoEx = () => {
 
    const onHidevalue = () => {
     console.log(reffered?.current?.value)
-}
-    return(<>
+    }
+    
+    return(
+    <div className='text-center d-flex '>
       <h1>Pratice about useRef!!</h1>
-       {show && <input type='text' placeholder='uncontrolled!' ref={reffered} /> }
+       {show && <input className='bg-green-400' type='text' placeholder='uncontrolled!' ref={reffered} /> }
        
-       <button onClick={onHidevalue} >Get value </button>
-       <button onClick={() =>  setshow( curr => !curr ) } >Hide value</button>
-    </>
+       <button className='bg-red-500 m-2' onClick={onHidevalue} >Get value </button>
+       <button className='bg-blue-400' onClick={() =>  setshow( curr => !curr ) } >Hide value</button>
+       </div>
+    
     )
 }
 
