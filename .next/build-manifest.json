@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/otheruncro": [
+    "/controlled": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/otheruncro.js"
-    ],
-    "/usereff": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/usereff.js"
+      "static/chunks/pages/controlled.js"
     ]
   },
   "ampFirstPages": []
