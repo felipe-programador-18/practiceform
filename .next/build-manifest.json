@@ -25,20 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/contr": [
+    "/contro-date": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/contr.js"
-    ],
-    "/controlled": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/controlled.js"
-    ],
-    "/un": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/un.js"
+      "static/chunks/pages/contro-date.js"
     ]
   },
   "ampFirstPages": []
