@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 
+
+
 //practice more little bit about form controlled
 
 const uf = ['RS','SC','RJ','SP']
@@ -22,17 +24,33 @@ const controlleFormDate = () => {
     } )
   }  
 
-
   const getAllValue = () => {
       console.log(form)
   }
 
-  return(<> <div className='text-center d-block' >
+  //create object later make if to very and attruibute object in form
+  const handEror = {
+     name:false,
+     email: false
+  }
+
+   if(form.name === ''){
+      handEror.name = true 
+   }
+   if(form.email ==='' || form.email.indexOf("@") < 0 ){
+     handEror.email = true
+   }  
+   
+   //create one variable to create function!!
+   // that get all keys and later verify about errors
+   const solutionReducer = Object.keys(handEror).reduce((one, two) => one || handEror[two], false )
+
+  return(<> <div className='text-center d-flex ' >
 
     Name:  
-    <input className='bg-gray-300' type='text' name='name' value={form.name} onChange={Onchange} />
+    <input className='bg-gray-300 d-block' type='text' name='name' value={form.name} onChange={Onchange} />
     E-mail:
-    <input className='bg-gray-300'  type='email' name='email' onChange={Onchange} value={form.email} />
+    <input className='bg-gray-300 d-block'  type='email' name='email' onChange={Onchange} value={form.email} />
     Wish receive either week news.
 
     <input type='checkbox' 
@@ -54,7 +72,7 @@ const controlleFormDate = () => {
         
     </select>
 
-    <button className='bg-red-800' onClick={getAllValue}  >Send Value!</button>
+    <button className='bg-red-800' onClick={getAllValue}  disabled={solutionReducer} >Send Value!</button>
     <button className='bg-blue-900'  onClick={()=> setform(curr => !curr) }  >Hide Value!</button>
      
      <pre> {JSON.stringify(form, null, 2)} </pre>
