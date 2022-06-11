@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/contro-date": [
+    "/pracitice": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/contro-date.js"
+      "static/chunks/pages/pracitice.js"
     ]
   },
   "ampFirstPages": []

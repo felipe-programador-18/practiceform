@@ -2,5 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/contro-date": "pages/contro-date.js"
+  "/api/users/[id]": "pages/api/users/[id].js",
+  "/pracitice": "pages/pracitice.js"
 }
